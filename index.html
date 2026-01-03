@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Jatin Kumar Arora — Robotics Safety</title>
+  <meta name="description" content="Robotics engineer focused on safe autonomy, control, and learning-based robotic systems."/>
+  <link rel="stylesheet" href="assets/style.css"/>
+  <script defer src="assets/main.js"></script>
+</head>
+<body>
+  <div class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="index.html">
+        <div class="logo"></div>
+        <div>
+          <div>Jatin Kumar Arora</div>
+          <div class="sub">Safe Autonomy • Robotics</div>
+        </div>
+      </a>
+      <div class="menu">
+        <a href="about.html" data-page="about.html">About</a>
+        <a href="research.html" data-page="research.html">Research</a>
+        <a href="publications.html" data-page="publications.html">Publications</a>
+        <a href="articles.html" data-page="articles.html">Articles</a>
+        <a href="education.html" data-page="education.html">Education</a>
+        <a href="experience.html" data-page="experience.html">Experience</a>
+        <a href="cv.html" data-page="cv.html">CV</a>
+        <button class="btn" onclick="toggleTheme()" title="Toggle theme">☾ / ☀</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="grid">
+      <div class="card">
+        <div class="badge">Robotics Engineer • Safe Autonomy</div>
+        <h1 class="h1">Runtime safety for real robots.</h1>
+        <p class="muted">
+          I’m a robotics engineer specializing in safe autonomy, control theory, and learning-based robotic systems.
+          I’ve deployed large-scale robot fleets and I’m currently pursuing MS(R) in Robotics & Control at IIT Delhi,
+          focusing on safe and generalizable autonomy for robotic navigation.
+        </p>
+
+        <div class="kv">
+          <a class="btn" href="mailto:arorajatinkumar2000@gmail.com">Email</a>
+          <a class="btn" href="https://github.com/jatinarora30" target="_blank" rel="noreferrer">GitHub</a>
+          <a class="btn" href="https://www.linkedin.com/in/jatin-kumar-arora-26553b171" target="_blank" rel="noreferrer">LinkedIn</a>
+        </div>
+
+        <hr/>
+        <h2 class="h2">Focus areas</h2>
+        <ul class="list">
+          <li>Safe & reliable autonomy (runtime decision-making under uncertainty)</li>
+          <li>Model Predictive Control (MPC) and control guarantees in deployment</li>
+          <li>Motion planning / navigation and safety-aware evaluation</li>
+          <li>Learning-based robotics (RL) with safety constraints</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2 class="h2">Featured</h2>
+        <p class="muted">A few starting points.</p>
+
+        <div class="card" style="box-shadow:none; margin-top:12px">
+          <div class="meta">Article • Jan 2026</div>
+          <div style="font-weight:720; margin-top:6px">
+            <a href="articles/runtime-safety.html">Why robot safety is a runtime problem</a>
+          </div>
+          <p class="muted">How execution-time uncertainty breaks planning-time guarantees — and what to do about it.</p>
+        </div>
+
+        <div class="card" style="box-shadow:none; margin-top:12px">
+          <div class="meta">Publication</div>
+          <div style="font-weight:720; margin-top:6px">
+            <a href="publications.html">Unified Path Planner with Adaptive Safety and Optimality</a>
+          </div>
+          <p class="muted">arXiv preprint (2025). Links + summary.</p>
+        </div>
+
+        <div class="card" style="box-shadow:none; margin-top:12px">
+          <div class="meta">Reading</div>
+          <div style="font-weight:720; margin-top:6px">
+            <a href="articles.html">Articles index</a>
+          </div>
+          <p class="muted">All essays and notes in one place.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div>© <span id="y"></span> Jatin Kumar Arora</div>
+      <div class="muted2">Built on GitHub Pages • Math-ready articles</div>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

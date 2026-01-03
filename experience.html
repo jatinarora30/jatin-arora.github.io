@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Experience — Jatin Kumar Arora</title>
+  <link rel="stylesheet" href="assets/style.css"/>
+  <script defer src="assets/main.js"></script>
+</head>
+<body>
+  <div class="nav"><div class="nav-inner">
+    <a class="brand" href="index.html"><div class="logo"></div><div><div>Jatin Kumar Arora</div><div class="sub">Safe Autonomy • Robotics</div></div></a>
+    <div class="menu">
+      <a href="about.html" data-page="about.html">About</a>
+      <a href="research.html" data-page="research.html">Research</a>
+      <a href="publications.html" data-page="publications.html">Publications</a>
+      <a href="articles.html" data-page="articles.html">Articles</a>
+      <a href="education.html" data-page="education.html">Education</a>
+      <a href="experience.html" data-page="experience.html">Experience</a>
+      <a href="cv.html" data-page="cv.html">CV</a>
+      <button class="btn" onclick="toggleTheme()">☾ / ☀</button>
+    </div>
+  </div></div>
+
+  <div class="container">
+    <div class="card">
+      <h1 class="h1">Experience</h1>
+
+      <hr/>
+      <h2 class="h2">Engineer — Mobile Robotics (Addverb Technologies)</h2>
+      <p class="muted">Noida, India • Aug 2023 – Oct 2024</p>
+      <ul class="list">
+        <li>Led architectural transition from microservices to a monolithic ROS stack, improving integration and deployment speed.</li>
+        <li>Developed adaptive AGV solutions with vertical lift modules and custom attachments.</li>
+        <li>Implemented EKF-based localization, driver integration (LiDAR, IMU, BMS), and control state machines.</li>
+        <li>Deployed 40+ robots across client facilities; optimized runtime performance by ~25%.</li>
+      </ul>
+
+      <hr/>
+      <h2 class="h2">Graduate Engineer Trainee — Robotics (Addverb Technologies)</h2>
+      <p class="muted">Noida, India • Aug 2022 – Aug 2023</p>
+      <ul class="list">
+        <li>Built hardware abstraction layers and a modular driver stack.</li>
+        <li>Contributed to safety protocols and state feedback in robotic fleets.</li>
+      </ul>
+
+      <hr/>
+      <h2 class="h2">Summer Intern — R&D (Havells)</h2>
+      <p class="muted">India • Feb 2021 – Jul 2021</p>
+      <ul class="list">
+        <li>Developed simulation tools for heater energy loss analysis.</li>
+        <li>Automated thickness-rating selection logic to support product design.</li>
+      </ul>
+
+      <hr/>
+      <h2 class="h2">Simulation Intern (Breathe Digital)</h2>
+      <p class="muted">India • Dec 2020 – Jan 2021</p>
+      <ul class="list">
+        <li>Built SITL drone models with Gazebo and PX4.</li>
+        <li>Verified control algorithms against simulated CAD drones (SolidWorks).</li>
+      </ul>
+    </div>
+
+    <div class="footer">
+      <div>© <span id="y"></span> Jatin Kumar Arora</div>
+      <div class="muted2">Experience</div>
+    </div>
+  </div>
+
+  <script>document.getElementById("y").textContent=new Date().getFullYear();</script>
+</body>
+</html>

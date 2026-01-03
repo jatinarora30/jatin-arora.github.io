@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Education — Jatin Kumar Arora</title>
+  <link rel="stylesheet" href="assets/style.css"/>
+  <script defer src="assets/main.js"></script>
+</head>
+<body>
+  <div class="nav"><div class="nav-inner">
+    <a class="brand" href="index.html"><div class="logo"></div><div><div>Jatin Kumar Arora</div><div class="sub">Safe Autonomy • Robotics</div></div></a>
+    <div class="menu">
+      <a href="about.html" data-page="about.html">About</a>
+      <a href="research.html" data-page="research.html">Research</a>
+      <a href="publications.html" data-page="publications.html">Publications</a>
+      <a href="articles.html" data-page="articles.html">Articles</a>
+      <a href="education.html" data-page="education.html">Education</a>
+      <a href="experience.html" data-page="experience.html">Experience</a>
+      <a href="cv.html" data-page="cv.html">CV</a>
+      <button class="btn" onclick="toggleTheme()">☾ / ☀</button>
+    </div>
+  </div></div>
+
+  <div class="container">
+    <div class="card">
+      <h1 class="h1">Education</h1>
+
+      <hr/>
+      <h2 class="h2">MS(R) — Robotics & Control Theory</h2>
+      <p class="muted">Indian Institute of Technology (IIT) Delhi • 2024 – present</p>
+      <p class="muted"><b>Thesis:</b> Generalizable and Safe Autonomy for Robotic Navigation (under Prof. Shubhendu Bhasin)</p>
+      <p class="muted"><b>Coursework:</b> Mathematical Methods in Control, Nonlinear Systems, Optimal Control, MPC, Linear Systems, Stochastic Filtering & Identification</p>
+
+      <hr/>
+      <h2 class="h2">B.E. — Mechanical Engineering</h2>
+      <p class="muted">Thapar Institute of Engineering and Technology • 2018 – 2022 • CGPA: 9.28</p>
+      <p class="muted">Activities: Robotics Society (Gazebo simulations)</p>
+    </div>
+
+    <div class="footer">
+      <div>© <span id="y"></span> Jatin Kumar Arora</div>
+      <div class="muted2">Education</div>
+    </div>
+  </div>
+
+  <script>document.getElementById("y").textContent=new Date().getFullYear();</script>
+</body>
+</html>

@@ -7,53 +7,112 @@
   <link rel="stylesheet" href="assets/style.css"/>
   <script defer src="assets/main.js"></script>
 </head>
-<body>
-  <div class="nav"><div class="nav-inner">
-    <a class="brand" href="index.html"><div class="logo"></div><div><div>Jatin Kumar Arora</div><div class="sub">Safe Autonomy • Robotics</div></div></a>
-    <div class="menu">
-      <a href="about.html" data-page="about.html">About</a>
-      
-      <a href="publications.html" data-page="publications.html">Publications</a>
-      <a href="articles.html" data-page="articles.html">Articles</a>
-      <a href="education.html" data-page="education.html">Education</a>
-      <a href="experience.html" data-page="experience.html">Experience</a>
-      <a href="cv.html" data-page="cv.html">CV</a>
-      <button class="btn" onclick="toggleTheme()">☾ / ☀</button>
-    </div>
-  </div></div>
 
+<body>
+  <!-- NAVBAR -->
+  <div class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="index.html">
+        <div class="logo"></div>
+        <div>
+          <div>Jatin Kumar Arora</div>
+          <div class="sub">Safe Autonomy • Robotics</div>
+        </div>
+      </a>
+
+      <div class="menu">
+        <a href="about.html">About</a>
+        <a class="active" href="publications.html">Publications</a>
+        <a href="articles.html">Articles</a>
+        <a href="education.html">Education</a>
+        <a href="experience.html">Experience</a>
+        <a href="cv.html">CV</a>
+        <button class="btn" onclick="toggleTheme()">☾ / ☀</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONTENT -->
   <div class="container">
+
     <div class="card">
       <h1 class="h1">Publications</h1>
+      <div class="muted">
+        Peer-reviewed journal articles and preprints
+      </div>
+
       <hr/>
+
+      <!-- ===================== 2025 ===================== -->
       <h2 class="h2">2025</h2>
-      <div class="card" style="box-shadow:none">
-        <div style="font-weight:750">Unified Path Planner with Adaptive Safety and Optimality</div>
-        <div class="muted">Jatin Kumar Arora, Soutrik Bandyopadhyay, Shubhendu Bhasin •</div>
-        <div class="kv" style="margin-top:10px">
-          <a class="btn" href="#" title="Link">Link : https://arxiv.org/abs/2505.23197 </a>
+
+      <div class="pub">
+        <img src="assets/pubs/upp.png" alt="Unified Path Planner paper figure"/>
+
+        <div class="pub-content">
+          <div class="pub-title">
+            Unified Path Planner with Adaptive Safety and Optimality
+          </div>
+
+          <div class="pub-authors">
+            <strong>Jatin Kumar Arora</strong>, Soutrik Bandyopadhyay, Shubhendu Bhasin
+          </div>
+
+          <div class="pub-venue">
+            arXiv preprint, 2025
+          </div>
+
+          <div class="pub-links">
+            <a href="https://arxiv.org/abs/2505.23197" target="_blank">arXiv</a>
+            <span>•</span>
+            <a href="#" target="_blank">PDF</a>
+          </div>
         </div>
       </div>
 
       <hr/>
+
+      <!-- ===================== 2023 ===================== -->
       <h2 class="h2">2023</h2>
-      <div class="card" style="box-shadow:none">
-        <div style="font-weight:750">Low-Frequency Adaptation Deep Neural Network-Based Domain Adaptation Approach for Shaft Imbalance Fault Diagnosis</div>
-        <div class="muted">Jatin Kumar Arora, Sudhar Rajagopalan, Jaskaran Singh, Ashish Purohit • Journal of Vibration Engineering & Technologies (Springer), 2023</div>
-        <div class="kv" style="margin-top:10px">
-          <a class="btn" href="#" title="Link"> https://link.springer.com/article/10.1007/s42417-022-00848-7 </a>
+
+      <div class="pub">
+        <img src="assets/pubs/lfa.png" alt="Shaft imbalance fault diagnosis paper"/>
+
+        <div class="pub-content">
+          <div class="pub-title">
+            Low-Frequency Adaptation Deep Neural Network-Based Domain Adaptation
+            Approach for Shaft Imbalance Fault Diagnosis
+          </div>
+
+          <div class="pub-authors">
+            <strong>Jatin Kumar Arora</strong>, Sudhar Rajagopalan,
+            Jaskaran Singh, Ashish Purohit
+          </div>
+
+          <div class="pub-venue">
+            Journal of Vibration Engineering & Technologies (Springer), 2023
+          </div>
+
+          <div class="pub-links">
+            <a href="https://link.springer.com/article/10.1007/s42417-022-00848-7" target="_blank">
+              Springer
+            </a>
+          </div>
         </div>
       </div>
 
-      <hr/>
-      
+    </div>
 
+    <!-- FOOTER -->
     <div class="footer">
       <div>© <span id="y"></span> Jatin Kumar Arora</div>
       <div class="muted2">Publications</div>
     </div>
+
   </div>
 
-  <script>document.getElementById("y").textContent=new Date().getFullYear();</script>
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>

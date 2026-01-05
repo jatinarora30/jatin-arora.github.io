@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Generalizing Robot Safety — Jatin Kumar Arora</title>
+  <link rel="stylesheet" href="../assets/style.css"/>
+  <script defer src="../assets/main.js"></script>
+</head>
+<body>
+  <div class="nav"><div class="nav-inner">
+    <a class="brand" href="../index.html">
+      <div class="logo"></div>
+      <div>
+        <div>Jatin Kumar Arora</div>
+        <div class="sub">Safe Autonomy • Robotics</div>
+      </div>
+    </a>
+    <div class="menu">
+      <a href="../about.html">About</a>
+      <a href="../research.html">Research</a>
+      <a href="../publications.html">Publications</a>
+      <a href="../articles.html">Articles</a>
+      <a href="../education.html">Education</a>
+      <a href="../experience.html">Experience</a>
+      <a href="../cv.html">CV</a>
+      <button class="btn" onclick="toggleTheme()">☾ / ☀</button>
+    </div>
+  </div></div>
+
+  <div class="container">
+    <div class="card article">
+      <div class="meta">Essay • Jan 2026</div>
+      <h1 class="article-title">Generalizing Robot Safety</h1>
+
+      <p class="muted">
+        The phrase <em>“Safety first”</em> is commonly seen across factories, shop floors, and machine operating areas.
+        As robots increasingly move beyond controlled industrial settings into homes, warehouses, hospitals, and public spaces,
+        ensuring their safe operation becomes a fundamental concern.
+        Failures in safety are not merely inconvenient; in many cases, they can be hazardous or even fatal.
+      </p>
+
+      <p class="muted">
+        Consider the example of an autonomous vehicle driving at high speed on an open highway.
+        If an animal suddenly enters the road, delayed reaction time or uncertainty in perception can lead to catastrophic outcomes.
+        Such failures rarely arise from a single component alone.
+        Instead, they often emerge from the interaction between perception, decision-making, planning, and control.
+        Despite significant advances in robotic capabilities, safety remains a central and unresolved challenge.
+      </p>
+
+      <p class="muted">
+        This article poses an open and fundamental question:
+        <em>How can robot safety be generalized across different domains of robotic systems?</em>
+      </p>
+
+      <p class="muted">
+        Different research communities interpret robot safety in distinct ways.
+        Some representative perspectives are outlined below.
+      </p>
+
+      <ul class="list">
+        <li>
+          <strong>Control theory:</strong>
+          Safety is typically defined in terms of invariance, where system trajectories are required to remain within a predefined safe set.
+          This notion is commonly enforced using control barrier functions, which restrict admissible control inputs to guarantee safety.
+        </li>
+
+        <li>
+          <strong>Reinforcement learning:</strong>
+          Safety is formulated as reward maximization under constraints.
+          Problems are often modeled as Constrained Markov Decision Processes (CMDPs) and addressed using techniques such as
+          Lagrangian methods, risk-sensitive objectives (e.g., CVaR), penalty-based approaches, or barrier-shaped reward functions.
+        </li>
+
+        <li>
+          <strong>Formal methods and programs:</strong>
+          Safety is specified using logical formalisms such as Linear Temporal Logic,
+          where desired behaviors and forbidden states are encoded explicitly and verified against system executions.
+        </li>
+
+        <li>
+          <strong>Perception systems:</strong>
+          Safety is closely tied to uncertainty.
+          Failures may arise from unobserved regions, blind spots, misclassifications, or dynamically changing environments,
+          all of which can invalidate downstream assumptions made by planners or controllers.
+        </li>
+
+        <li>
+          <strong>Path planning:</strong>
+          Safety is often defined geometrically, aiming to compute feasible paths that maintain sufficient clearance from obstacles.
+          Common strategies include obstacle inflation, conservative heuristics, and geometric safety margins.
+        </li>
+      </ul>
+
+      <p class="muted">
+        Each of these domains provides a well-defined notion of safety within its own scope.
+        However, robotic systems are composed of multiple such modules operating simultaneously.
+        A key challenge arises when these independently defined notions of safety must interact within a single system.
+      </p>
+
+      <p class="muted">
+        This leads to a fundamental question:
+        if safety is guaranteed at the level of individual components,
+        how can we ensure that safety is preserved when these components operate together in a closed-loop robotic system?
+      </p>
+    </div>
+
+    <div class="footer">
+      <div>© <span id="y"></span> Jatin Kumar Arora</div>
+      <div class="muted2"><a href="../articles.html">Back to Articles</a></div>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

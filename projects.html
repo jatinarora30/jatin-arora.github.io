@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Projects — Jatin Kumar Arora</title>
+  <link rel="stylesheet" href="assets/style.css"/>
+  <script defer src="assets/main.js"></script>
+</head>
+<body>
+  <div class="nav"><div class="nav-inner">
+    <a class="brand" href="index.html">
+      <div class="logo"></div>
+      <div>
+        <div>Jatin Kumar Arora</div>
+        <div class="sub">Safe Autonomy • Robotics</div>
+      </div>
+    </a>
+    <div class="menu">
+      <a href="about.html" data-page="about.html">About</a>
+      <a href="publications.html" data-page="publications.html">Publications</a>
+      <a href="articles.html" data-page="articles.html">Articles</a>
+      <a href="projects.html" data-page="projects.html">Projects</a>
+      <a href="education.html" data-page="education.html">Education</a>
+      <a href="experience.html" data-page="experience.html">Experience</a>
+      <a href="cv.html" data-page="cv.html">CV</a>
+      <button class="btn" onclick="toggleTheme()">☾ / ☀</button>
+    </div>
+  </div></div>
+
+  <div class="container">
+    <div class="card">
+      <h1 class="h1">Projects</h1>
+      <p class="muted">
+        Selected projects across safe autonomy, control, reinforcement learning,
+        perception, planning, and robotic simulation.
+      </p>
+
+      <hr/>
+
+      <!-- Control & MPC -->
+      <div class="card" style="box-shadow:none">
+        <div class="meta">Control • MPC</div>
+        <div style="font-weight:780; margin-top:6px">
+          TinyMPC Reproduction (ICRA 2024)
+        </div>
+        <p class="muted">
+          Reproduced TinyMPC results for constrained trajectory optimization,
+          validating real-time MPC behavior for robotics applications.
+        </p>
+      </div>
+
+      <div class="card" style="box-shadow:none">
+        <div class="meta">Optimal Control</div>
+        <div style="font-weight:780; margin-top:6px">
+          Waypoint Following (Time- & Energy-Optimal Control)
+        </div>
+        <p class="muted">
+          Implemented time-optimal and energy-optimal control strategies
+          for mobile robot waypoint navigation.
+        </p>
+      </div>
+
+      <hr/>
+
+      <!-- Reinforcement Learning -->
+      <div class="card" style="box-shadow:none">
+        <div class="meta">Reinforcement Learning</div>
+        <div style="font-weight:780; margin-top:6px">
+          PPO from Scratch (CartPole)
+        </div>
+        <p class="muted">
+          Implemented Proximal Policy Optimization from scratch in Gymnasium,
+          focusing on stability, reproducibility, and clean training pipelines.
+        </p>
+      </div>
+
+      <hr/>
+
+      <!-- Perception -->
+      <div class="card" style="box-shadow:none">
+        <div class="meta">Perception • Vision Transformers</div>
+        <div style="font-weight:780; margin-top:6px">
+          SegFormer Image Segmentation
+        </div>
+        <p class="muted">
+          Built an image segmentation pipeline using SegFormer-based
+          vision transformers.
+        </p>
+      </div>
+
+      <div class="card" style="box-shadow:none">
+        <div class="meta">Perception • Depth Estimation</div>
+        <div style="font-weight:780; margin-top:6px">
+          Monocular Depth Estimation
+        </div>
+        <p class="muted">
+          Implemented a deep learning model for estimating object depth
+          from monocular RGB images.
+        </p>
+      </div>
+
+      <hr/>
+
+      <!-- ROS & Simulation -->
+      <div class="card" style="box-shadow:none">
+        <div class="meta">ROS • Simulation</div>
+        <div style="font-weight:780; margin-top:6px">
+          Differential Drive Robot in Gazebo
+        </div>
+        <p class="muted">
+          Simulated a differential-drive robot with camera and PCL sensors,
+          integrating perception, navigation, and localization.
+        </p>
+      </div>
+
+      <div class="card" style="box-shadow:none">
+        <div class="meta">ROS • Simulation</div>
+        <div style="font-weight:780; margin-top:6px">
+          “Catch Me If You Can” (turtlesim)
+        </div>
+        <p class="muted">
+          Designed a turtlesim-based game where agents chase a player,
+          controlled via keyboard teleoperation.
+        </p>
+      </div>
+
+      <hr/>
+
+      <!-- Planning & Systems -->
+      <div class="card" style="box-shadow:none">
+        <div class="meta">Path Planning</div>
+        <div style="font-weight:780; margin-top:6px">
+          A* Path Planning with OpenStreetMap
+        </div>
+        <p class="muted">
+          Implemented shortest-path planning using A* on real-world
+          OpenStreetMap data.
+        </p>
+      </div>
+
+      <div class="card" style="box-shadow:none">
+        <div class="meta">Systems Programming</div>
+        <div style="font-weight:780; margin-top:6px">
+          Linux System Monitor (C++)
+        </div>
+        <p class="muted">
+          Built an htop-style system monitor by parsing /proc for
+          process, CPU, and memory statistics.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="footer">
+      <div>© <span id="y"></span> Jatin Kumar Arora</div>
+      <div class="muted2">Projects</div>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

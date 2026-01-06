@@ -313,3 +313,145 @@ kbd,code,pre{font-family:var(--mono)}
   box-shadow: 0 12px 28px rgba(0,0,0,0.18);
   border-color: color-mix(in oklab, var(--border) 55%, rgba(120,140,255,0.5));
 }
+
+/* =========================
+   MOBILE FIX PACK (paste at end)
+   ========================= */
+
+/* 1) Prevent horizontal scrolling from wide grids / long text */
+html, body { overflow-x: hidden; }
+.container { width: 100%; }
+
+/* Make grid children actually shrink instead of forcing overflow */
+.grid, .hero-grid, .hero-main { min-width: 0; }
+.card, .hero, .hero-text, .hero-photo, .pub-content { min-width: 0; }
+.h1, .h2, p, li { overflow-wrap: anywhere; }
+
+/* 2) NAV: wrap nicely on small screens */
+.nav-inner{
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.brand{ min-width: 220px; }
+.menu{
+  width: 100%;
+  justify-content: flex-start;
+  gap: 8px;
+}
+.menu a{
+  padding: 8px 10px;
+  border-radius: 10px;
+}
+
+/* 3) HERO: improve responsiveness + spacing */
+.hero-grid{
+  grid-template-columns: 1.35fr 0.65fr;
+  align-items: start;
+}
+.hero-main{
+  grid-template-columns: 1fr 220px;
+  align-items: start;
+}
+.hero-top{
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+.pill-row{
+  width: 100%;
+  justify-content: flex-start; /* pills don't squeeze to the right on mobile */
+}
+
+/* 4) Safer fallback for color-mix() (mobile browsers can be weird) */
+.pill,
+.stat{
+  background: var(--card); /* fallback */
+}
+@supports (background: color-mix(in oklab, #000 50%, transparent)){
+  .pill{
+    background: color-mix(in oklab, var(--card) 85%, transparent);
+  }
+  .stat{
+    background: color-mix(in oklab, var(--card) 92%, transparent);
+  }
+}
+
+/* =========================
+   Small screens
+   ========================= */
+@media (max-width: 900px){
+
+  .container{
+    padding: 18px 14px 60px;
+  }
+
+  .grid{ grid-template-columns: 1fr; }
+  .hero-grid{ grid-template-columns: 1fr; }
+  .hero-main{ grid-template-columns: 1fr; }
+
+  .hero{
+    padding: 16px;
+  }
+
+  /* Heading scale */
+  .h1{ font-size: 1.75rem; }
+  .article-title{ font-size: 1.55rem; }
+
+  /* Make buttons wrap and fill more naturally */
+  .hero-actions{
+    gap: 10px;
+  }
+  .btn{
+    width: auto;
+    max-width: 100%;
+  }
+
+  /* Avatar: center + smaller */
+  .hero-photo{
+    align-items: center;
+  }
+  .avatar{
+    width: 140px;
+    height: 140px;
+  }
+  .quick-stats{
+    max-width: 520px;  /* prevents full-bleed huge blocks */
+    width: 100%;
+  }
+
+  /* Pills: avoid cramming */
+  .pill{
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+
+  /* Publications block: stack image on top */
+  .pub{
+    flex-direction: column;
+    gap: 12px;
+  }
+  .pub img{
+    width: 100%;
+    max-width: 320px;
+  }
+}
+
+/* =========================
+   Very small screens (phones)
+   ========================= */
+@media (max-width: 420px){
+
+  .nav-inner{ padding: 12px 14px; }
+  .menu a{ font-size: .9rem; }
+
+  .h1{ font-size: 1.55rem; line-height: 1.15; }
+
+  .btn{
+    width: 100%;
+    justify-content: center;
+  }
+
+  .icon-btn{
+    width: 42px;
+    height: 42px;
+  }
+}

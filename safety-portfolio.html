@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Safety Evaluation Portfolio — Jatin Kumar Arora</title>
+
+  <meta name="description"
+        content="Independent safety evaluation work: Emergency Stop & Safe Stop, and Load Handling." />
+
+  <link rel="stylesheet" href="assets/style.css"/>
+  <script defer src="assets/main.js"></script>
+</head>
+
+<body>
+
+  <div class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="index.html">
+        <div class="logo"></div>
+        <div>
+          <div>Jatin Kumar Arora</div>
+          <div class="sub">Safe Autonomy • Robotics</div>
+        </div>
+      </a>
+
+      <div class="menu">
+        <a href="about.html" data-page="about.html">About</a>
+        <a href="publications.html" data-page="publications.html">Publications</a>
+        <a href="articles.html" data-page="articles.html">Articles</a>
+        <a href="projects.html" data-page="projects.html">Projects</a>
+        <a href="education.html" data-page="education.html">Education</a>
+        <a href="experience.html" data-page="experience.html">Experience</a>
+        <a href="cv.html" data-page="cv.html">CV</a>
+        <button class="btn" onclick="toggleTheme()" title="Toggle theme">☾ / ☀</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+
+    <div class="card">
+      <h1 class="h1">Safety Evaluation Portfolio</h1>
+
+      <p class="muted">
+        This page summarizes my independent work on structured safety evaluation kits
+        for robotic systems. Each kit defines safety intent (invariants), hazard scope,
+        and evidence-based scenarios intended for pre-deployment and internal engineering review.
+      </p>
+
+      <p class="muted2">
+        This work is for portfolio and engineering demonstration purposes.
+        It is not certification or regulatory approval.
+      </p>
+
+      <hr/>
+
+
+      <!-- ===== KIT 1 ===== -->
+      <div class="card" style="box-shadow:none; margin-top:14px">
+        <div class="meta">Kit</div>
+
+        <div style="font-weight:720; margin-top:6px">
+          ESTOP-SAFE-v1.0 — Emergency Stop &amp; Safe Stop
+        </div>
+
+        <div class="muted2" style="margin-top:6px">
+          Version: v1.0 • Updated: Jan 2026
+        </div>
+
+        <p class="muted" style="margin-top:10px">
+          Evaluates emergency stop response time and stopping distance, override priority across
+          control sources, and prevention of unintended restart after emergency stop release.
+        </p>
+
+        <ul class="list">
+          <li><b>Robot types:</b> Mobile robots, arms/manipulators, mobile manipulators</li>
+          <li><b>Core checks:</b> bounded stop, command override, no auto-resume</li>
+          <li><b>Evidence:</b> logs (timestamps/state), video, repeatability across cycles</li>
+        </ul>
+
+        <!-- Downloads -->
+        <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:10px">
+          <a class="btn" href="assets/kits/estop-kit.pdf" target="_blank" rel="noopener">
+            Download Kit PDF
+          </a>
+          <a class="btn" href="assets/kits/estop-kit-report.pdf" target="_blank" rel="noopener">
+            View Sample Report
+          </a>
+        </div>
+
+        <div class="muted2" style="margin-top:10px">
+          Note: This kit supports internal engineering review and testing; it does not constitute certification.
+        </div>
+      </div>
+
+
+      <!-- ===== KIT 2 ===== -->
+      <div class="card" style="box-shadow:none; margin-top:14px">
+        <div class="meta">Kit</div>
+
+        <div style="font-weight:720; margin-top:6px">
+          LOAD-HANDLE-v1.0 — Load Handling &amp; Transfer
+        </div>
+
+        <div class="muted2" style="margin-top:6px">
+          Version: v1.0 • Updated: Jan 2026
+        </div>
+
+        <p class="muted" style="margin-top:10px">
+          Evaluates load stability during loading, transport, turning/braking, and unloading.
+          Focuses on preventing load drop, unstable handling, and unsafe interaction with people
+          or obstacles during load operations.
+        </p>
+
+        <ul class="list">
+          <li><b>Robot types:</b> Mobile robots, arms/manipulators, mobile manipulators</li>
+          <li><b>Core checks:</b> load retention, stability under motion, safe release</li>
+          <li><b>Evidence:</b> video observations, logs, event timestamps</li>
+        </ul>
+
+        <!-- Downloads -->
+        <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:10px">
+          <a class="btn" href="assets/kits/load-handle.pdf" target="_blank" rel="noopener">
+            Download Kit PDF
+          </a>
+          <a class="btn" href="assets/kits/load-handle-report.pdf" target="_blank" rel="noopener">
+            View Sample Report
+          </a>
+        </div>
+
+        <div class="muted2" style="margin-top:10px">
+          Note: This kit supports internal engineering review and testing; it does not constitute certification.
+        </div>
+      </div>
+
+
+      <hr/>
+
+      <h2 class="h2">How I Structure a Kit</h2>
+      <ul class="list">
+        <li><b>Safety intent:</b> invariants with clear pass/fail meaning</li>
+        <li><b>Hazard scope:</b> concrete hazard statements and references where applicable</li>
+        <li><b>Scenarios:</b> nominal + failure cases with evidence requirements</li>
+        <li><b>Outputs:</b> findings, gaps, and re-run conditions</li>
+      </ul>
+
+      <!-- Optional: Contact CTA -->
+      <div class="card" style="box-shadow:none; margin-top:14px">
+        <div class="meta">Feedback</div>
+        <p class="muted" style="margin-top:8px">
+          If you used a kit and found gaps, edge cases, or want to suggest additional test scenarios,
+          I’d love feedback. Reach out via LinkedIn.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="footer">
+      <div>© <span id="y"></span> Jatin Kumar Arora</div>
+      <div class="muted2">Safety Evaluation Portfolio</div>
+    </div>
+
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

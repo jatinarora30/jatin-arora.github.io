@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Most Robots Don't Fail Because of AI — Jatin Kumar Arora</title>
+  <link rel="stylesheet" href="../assets/style.css"/>
+  <script defer src="../assets/main.js"></script>
+</head>
+<body>
+  <div class="nav"><div class="nav-inner">
+    <a class="brand" href="../index.html">
+      <div class="logo"></div>
+      <div>
+        <div>Jatin Kumar Arora</div>
+        <div class="sub">Safe Autonomy • Robotics</div>
+      </div>
+    </a>
+    <div class="menu">
+      <a href="../about.html">About</a>
+      <a href="../research.html">Research</a>
+      <a href="../publications.html">Publications</a>
+      <a href="../articles.html">Articles</a>
+      <a href="../education.html">Education</a>
+      <a href="../experience.html">Experience</a>
+      <a href="../cv.html">CV</a>
+      <button class="btn" onclick="toggleTheme()">☾ / ☀</button>
+    </div>
+  </div></div>
+
+  <div class="container">
+    <div class="card article">
+      <div class="meta">Article • Feb 2026</div>
+      <h1 class="article-title">
+        Most Robots Don't Fail Because of AI — They Fail Because of Missing Safety Logic
+      </h1>
+
+      <p class="muted">
+        When robotics failures make headlines, the immediate reaction is often:
+        the AI model was not trained enough.
+        The dataset was insufficient.
+        The policy failed to generalize.
+      </p>
+
+      <p class="muted">
+        But in many real deployments, the failure is not caused by weak intelligence.
+        It is caused by the absence of an explicit safety layer at runtime.
+      </p>
+
+      <p class="muted">
+        A navigation policy can achieve near-optimal reward in simulation.
+        A perception model can reach state-of-the-art accuracy.
+        A planner can compute collision-free trajectories under nominal assumptions.
+        Yet when these components operate together in a dynamic environment,
+        small deviations — sensor delay, state-estimation error, unexpected human motion —
+        can produce unsafe actions.
+      </p>
+
+      <p class="muted">
+        The problem is architectural.
+      </p>
+
+      <p class="muted">
+        Most robotic systems optimize for performance and treat safety as a secondary constraint.
+        Safety is embedded inside the objective, shaped into the reward,
+        or enforced implicitly through conservative heuristics.
+      </p>
+
+      <p class="muted">
+        But safety that exists only inside an optimization objective
+        disappears when assumptions break.
+      </p>
+
+      <p class="muted">
+        A structurally safe system must separate:
+      </p>
+
+      <ul class="list">
+        <li><strong>Nominal intelligence</strong> — the policy that seeks performance</li>
+        <li><strong>Safety supervision</strong> — a runtime mechanism that restricts admissible behavior</li>
+      </ul>
+
+      <p class="muted">
+        In this view, safety is not about training the perfect policy.
+        It is about ensuring that, at every timestep,
+        the executed control lies inside a verified safe set.
+      </p>
+
+      <p class="muted">
+        This requires:
+      </p>
+
+      <ul class="list">
+        <li>Explicit safety predicates evaluated online</li>
+        <li>Action projection or filtering into admissible control regions</li>
+        <li>Monitoring under perception and state-estimation uncertainty</li>
+        <li>Defined fallback or recovery behavior when margins collapse</li>
+      </ul>
+
+      <p class="muted">
+        A robot should not only ask:
+      </p>
+
+      <p class="muted">
+        <em>“What action maximizes expected reward?”</em>
+      </p>
+
+      <p class="muted">
+        It must also continuously enforce:
+      </p>
+
+      <p class="muted">
+        <em>“Is this action provably safe under current uncertainty?”</em>
+      </p>
+
+      <p class="muted">
+        As robots move into open, human-populated environments,
+        safety can no longer be treated as a property of individual modules.
+        It must become a structural invariant of the entire closed-loop architecture.
+      </p>
+
+      <p class="muted">
+        The next leap in autonomy will not come from larger models alone.
+        It will come from systems that explicitly separate performance from protection —
+        and treat runtime safety as a first-class architectural layer.
+      </p>
+    </div>
+
+    <div class="footer">
+      <div>© <span id="y"></span> Jatin Kumar Arora</div>
+      <div class="muted2"><a href="../articles.html">Back to Articles</a></div>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

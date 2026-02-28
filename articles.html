@@ -2,49 +2,95 @@
 <html lang="en">
 <head>
   <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>Articles — Jatin Kumar Arora</title>
+  <meta name="description" content="Essays and technical notes on robot safety, safe autonomy, runtime supervision, and control architectures."/>
   <link rel="stylesheet" href="assets/style.css"/>
   <script defer src="assets/main.js"></script>
 </head>
-<body>
-  <div class="nav"><div class="nav-inner">
-    <a class="brand" href="index.html"><div class="logo"></div><div><div>Jatin Kumar Arora</div><div class="sub">Safe Autonomy • Robotics</div></div></a>
-    <div class="menu">
-      <a href="about.html" data-page="about.html">About</a>
-      
-      <a href="publications.html" data-page="publications.html">Publications</a>
-      <a href="articles.html" data-page="articles.html">Articles</a>
-      <a href="projects.html" data-page="projects.html">Projects</a>
-      <a href="education.html" data-page="education.html">Education</a>
-      <a href="experience.html" data-page="experience.html">Experience</a>
-      <a href="cv.html" data-page="cv.html">CV</a>
-      <button class="btn" onclick="toggleTheme()">☾ / ☀</button>
-    </div>
-  </div></div>
 
+<body>
+
+  <!-- Navigation -->
+  <div class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="index.html">
+        <div class="logo"></div>
+        <div>
+          <div>Jatin Kumar Arora</div>
+          <div class="sub">Safe Autonomy • Robotics</div>
+        </div>
+      </a>
+
+      <div class="menu">
+        <a href="about.html">About</a>
+        <a href="publications.html">Publications</a>
+        <a href="articles.html" class="active">Articles</a>
+        <a href="projects.html">Projects</a>
+        <a href="education.html">Education</a>
+        <a href="experience.html">Experience</a>
+        <a href="cv.html">CV</a>
+        <button class="btn" onclick="toggleTheme()">☾ / ☀</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Content -->
   <div class="container">
+
     <div class="card">
       <h1 class="h1">Articles</h1>
-      <p class="muted">Essays, notes, and technical write-ups .</p>
+      <p class="muted">
+        Essays, system-level reflections, and technical notes on robot safety,
+        runtime supervision, and safe autonomy architectures.
+      </p>
 
-      <hr/>
-      <div class="card" style="box-shadow:none">
-        <div class="meta">Jan 2026 </div>
-        <div style="font-weight:780; margin-top:6px">
-          <a href="articles/generalizing-safety.html">Generalizing Robot Safety</a>
-        </div>
-        <p class="muted">How could we generalize robot safety?</p>
+      <hr style="margin: 28px 0;"/>
+
+      <!-- Article 1 -->
+      <div class="article-preview">
+        <div class="meta">January 2026</div>
+        <h3 style="margin-top:8px;">
+          <a href="articles/generalizing-safety.html">
+            Generalizing Robot Safety
+          </a>
+        </h3>
+        <p class="muted">
+          A systems-level discussion on how safety notions from control,
+          reinforcement learning, planning, and formal methods interact —
+          and why safety must be treated as an architectural property.
+        </p>
+      </div>
+
+      <hr style="margin: 24px 0; opacity:0.15"/>
+
+      <!-- Article 2 -->
+      <div class="article-preview">
+        <div class="meta">February 2026</div>
+        <h3 style="margin-top:8px;">
+          <a href="articles/robotsfail.html">
+            Most Robots Don’t Fail Because of AI — They Fail Because of Missing Safety Logic
+          </a>
+        </h3>
+        <p class="muted">
+          An argument for separating performance-driven intelligence from
+          runtime safety supervision in modern robotic systems.
+        </p>
       </div>
 
     </div>
 
+    <!-- Footer -->
     <div class="footer">
       <div>© <span id="y"></span> Jatin Kumar Arora</div>
       <div class="muted2">Articles</div>
     </div>
+
   </div>
 
-  <script>document.getElementById("y").textContent=new Date().getFullYear();</script>
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+
 </body>
 </html>

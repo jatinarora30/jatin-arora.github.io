@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Risk vs Uncertainty — Jatin Kumar Arora</title>
+  <link rel="stylesheet" href="../assets/style.css"/>
+  <script defer src="../assets/main.js"></script>
+</head>
+<body>
+  <div class="nav"><div class="nav-inner">
+    <a class="brand" href="../index.html">
+      <div class="logo"></div>
+      <div>
+        <div>Jatin Kumar Arora</div>
+        <div class="sub">Safe Autonomy • Robotics</div>
+      </div>
+    </a>
+    <div class="menu">
+      <a href="../about.html">About</a>
+      <a href="../research.html">Research</a>
+      <a href="../publications.html">Publications</a>
+      <a href="../articles.html">Articles</a>
+      <a href="../education.html">Education</a>
+      <a href="../experience.html">Experience</a>
+      <a href="../cv.html">CV</a>
+      <button class="btn" onclick="toggleTheme()">☾ / ☀</button>
+    </div>
+  </div></div>
+
+  <div class="container">
+    <div class="card article">
+      <div class="meta">Article • Feb 2026</div>
+      <h1 class="article-title">
+        Risk vs Uncertainty — The Most Important Distinction in Robot Safety
+      </h1>
+
+      <p class="muted">
+        Most robotic systems are designed to handle risk.
+        Very few are designed to handle uncertainty.
+      </p>
+
+      <p class="muted">
+        This distinction is subtle, but it explains why systems that perform well
+        in simulation often fail in the real world.
+      </p>
+
+      <p class="muted">
+        Risk refers to situations where outcomes are unknown,
+        but their probabilities are known or can be estimated.
+      </p>
+
+      <p class="muted">
+        A robot navigating around obstacles is operating under risk.
+        Collisions are possible, but their likelihood can be modeled.
+      </p>
+
+      <p class="muted">
+        Uncertainty is fundamentally different.
+        It refers to situations where the system does not even know
+        what outcomes are possible, or how likely they are.
+      </p>
+
+      <p class="muted">
+        Sensor failures, unseen environments, unexpected human behavior,
+        or model mismatch all introduce uncertainty.
+      </p>
+
+      <p class="muted">
+        The problem is that most control and learning algorithms
+        assume the world is governed by risk, not uncertainty.
+      </p>
+
+      <p class="muted">
+        They optimize expected performance under known distributions.
+        When those assumptions break, safety breaks with them.
+      </p>
+
+      <p class="muted">
+        Consider a mobile robot trained in simulation.
+        It learns to avoid obstacles and reaches its goal efficiently.
+      </p>
+
+      <p class="muted">
+        In deployment, a slight delay in sensing or an unmodeled disturbance
+        can push the system into unsafe states.
+      </p>
+
+      <p class="muted">
+        The failure is not due to poor intelligence.
+        It is due to unhandled uncertainty.
+      </p>
+
+      <p class="muted">
+        This leads to a critical insight:
+      </p>
+
+      <p class="muted">
+        <em>Risk can be optimized. Uncertainty must be guarded against.</em>
+      </p>
+
+      <p class="muted">
+        A safe robotic system must therefore go beyond minimizing expected cost.
+        It must detect when it is operating outside its assumptions,
+        and respond conservatively.
+      </p>
+
+      <p class="muted">
+        This may involve reducing speed, increasing safety margins,
+        switching to fallback behaviors, or stopping altogether.
+      </p>
+
+      <p class="muted">
+        As robots move into open-world environments,
+        safety can no longer rely on accurate models alone.
+      </p>
+
+      <p class="muted">
+        It must be designed to handle what the system does not know.
+      </p>
+
+      <p class="muted">
+        The future of robot safety lies not only in better models,
+        but in systems that remain safe even when those models are wrong.
+      </p>
+    </div>
+
+    <div class="footer">
+      <div>© <span id="y"></span> Jatin Kumar Arora</div>
+      <div class="muted2"><a href="../articles.html">Back to Articles</a></div>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

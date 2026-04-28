@@ -1,0 +1,418 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Generalizable and Safe Autonomy for Robotic Navigation</title>
+  <meta name="description" content="Research project page for MS(R) thesis on safe and optimal robotic navigation."/>
+  <link rel="stylesheet" href="assets/style.css"/>
+  <script defer src="assets/main.js"></script>
+</head>
+
+<body>
+  <div class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="index.html">
+        <div class="logo"></div>
+        <div>
+          <div>Jatin Kumar Arora</div>
+          <div class="sub">Safe Autonomy • Robotics</div>
+        </div>
+      </a>
+
+      <div class="menu">
+        <a href="about.html">About</a>
+        <a href="publications.html">Publications</a>
+        <a href="articles.html">Articles</a>
+        <a href="projects.html">Projects</a>
+        <a href="education.html">Education</a>
+        <a href="experience.html">Experience</a>
+        <a href="cv.html">CV</a>
+        <button class="btn" onclick="toggleTheme()" title="Toggle theme">☾ / ☀</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+
+    <!-- HERO -->
+    <div class="card">
+      <div class="badge">MS(R) Thesis • IIT Delhi • Robotics Safety</div>
+
+      <h1 class="h1">Generalizable and Safe Autonomy for Robotic Navigation</h1>
+
+      <p class="muted" style="font-size:17px">
+        A unified framework for balancing <b>safety</b> and <b>optimality</b> in robotic path planning
+        using an adaptive planner, a unified evaluation metric, and a reproducible benchmarking suite.
+      </p>
+
+      <p class="muted">
+        <b>Author:</b> Jatin Kumar Arora<br/>
+        <b>Advisor:</b> Prof. Shubhendu Bhasin<br/>
+        <b>Department:</b> Electrical Engineering, IIT Delhi
+      </p>
+
+      <div class="kv">
+        <a class="btn" href="YOUR_THESIS_PDF_LINK" target="_blank" rel="noreferrer">Thesis PDF</a>
+        <a class="btn" href="https://github.com/jatinarora30/safeplan" target="_blank" rel="noreferrer">SafePlan Code</a>
+        <a class="btn" href="https://github.com/jatinarora30/nav2_safeplan" target="_blank" rel="noreferrer">ROS2 Code</a>
+        <a class="btn" href="https://youtu.be/Vwg7CeW_qAg">Demo Video</a>
+      </div>
+    </div>
+
+    <!-- VIDEO -->
+    <div class="card" id="demo" style="margin-top:18px">
+      <h2 class="h2">Demo Video</h2>
+      <p class="muted">
+        Simulation and TurtleBot experiments demonstrating safety-aware navigation.
+      </p>
+
+      <div class="card" style="margin-top:18px">
+  <h2 class="h2">Demo Video</h2>
+  <p class="muted">
+    Simulation and TurtleBot experiments demonstrating safety-aware navigation.
+  </p>
+
+  <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden; border-radius:18px; margin-top:14px">
+    <iframe
+      src="https://www.youtube.com/embed/Vwg7CeW_qAg"
+      title="Thesis Demo Video"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen
+      style="position:absolute; top:0; left:0; width:100%; height:100%;">
+    </iframe>
+  </div>
+</div>
+
+    <!-- ABSTRACT -->
+    <div class="card" style="margin-top:18px">
+      <h2 class="h2">Abstract</h2>
+      <p class="muted">
+        Autonomous robots must navigate safely around obstacles while still reaching their goals efficiently.
+        Existing path planners often optimize either path length or obstacle clearance, but not both together.
+        This thesis proposes a unified framework for safe and optimal robotic navigation.
+      </p>
+
+      <p class="muted">
+        The work introduces the <b>Unified Path Planner (UPP)</b>, a graph-search planner that uses an
+        adaptive heuristic combining geometric distance and obstacle-proximity safety. It also proposes the
+        <b>OptiSafe Index</b>, a normalized metric that jointly evaluates safety and optimality, and
+        <b>SafePlan</b>, a benchmarking framework for evaluating classical and safety-aware planners.
+      </p>
+    </div>
+
+    <!-- TEASER IMAGE -->
+    <div class="card" style="margin-top:18px">
+      <h2 class="h2">Overview</h2>
+
+      <img src="assets/thesis/upp-planner-comparison.png"
+           alt="Planner comparison"
+           style="width:100%; border-radius:18px; margin-top:10px"/>
+
+      <div class="meta" style="margin-top:8px">
+        Planner comparison showing safety-aware navigation behavior.
+      </div>
+    </div>
+
+    <!-- PROBLEM -->
+    <div class="grid" style="margin-top:18px">
+      <div class="card">
+        <h2 class="h2">Problem</h2>
+        <p class="muted">
+          Classical planners such as A* often generate short paths but may pass close to obstacles.
+          Safety-aware planners improve clearance but may become overly conservative, longer, or slower.
+        </p>
+        <p class="muted">
+          The central challenge is to design navigation methods that are both safe and efficient.
+        </p>
+      </div>
+
+      <div class="card">
+        <h2 class="h2">Research Questions</h2>
+        <ul class="list">
+          <li>How can safety and optimality be balanced during planning?</li>
+          <li>How can this trade-off be measured using one unified metric?</li>
+          <li>How can planners be benchmarked fairly across safety, efficiency, and smoothness?</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- CONTRIBUTIONS -->
+    <div class="card" style="margin-top:18px">
+      <h2 class="h2">Contributions</h2>
+
+      <div class="grid">
+        <div class="card" style="box-shadow:none">
+          <div class="meta">01</div>
+          <h3>Unified Path Planner</h3>
+          <p class="muted">
+            A safety-aware graph-search planner using adaptive heuristic weighting and an inverse-distance safety field.
+          </p>
+        </div>
+
+        <div class="card" style="box-shadow:none">
+          <div class="meta">02</div>
+          <h3>OptiSafe Index</h3>
+          <p class="muted">
+            A normalized metric that jointly captures optimality, clearance, balance, and overall performance strength.
+          </p>
+        </div>
+
+        <div class="card" style="box-shadow:none">
+          <div class="meta">03</div>
+          <h3>SafePlan Benchmark</h3>
+          <p class="muted">
+            A modular benchmarking suite for reproducible evaluation of classical and safety-aware planners.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- METHOD -->
+    <div class="card" style="margin-top:18px">
+      <h2 class="h2">Method: Unified Path Planner</h2>
+
+      <p class="muted">
+        UPP uses a heuristic that combines Manhattan distance, Chebyshev distance, and a local safety field:
+      </p>
+
+      <div class="card" style="box-shadow:none; font-family:monospace; font-size:16px">
+        h(n) = α ℓ₁(n,t) + (1 − α) ℓ∞(n,t) + β S(n)
+      </div>
+
+      <ul class="list">
+        <li><b>α</b> controls directional behavior and path smoothness.</li>
+        <li><b>β</b> controls the importance of obstacle avoidance.</li>
+        <li><b>S(n)</b> represents local obstacle proximity using an inverse-distance safety field.</li>
+      </ul>
+
+      <p class="muted">
+        Unlike fixed-weight planners, UPP adapts α and β online based on search progress and turning behavior.
+      </p>
+
+      <img src="assets/thesis/safety-field.png"
+           alt="Safety field"
+           style="width:100%; border-radius:18px; margin-top:14px"/>
+
+      <div class="meta" style="margin-top:8px">
+        Local safety field used by UPP to penalize obstacle-proximal regions.
+      </div>
+    </div>
+
+    <!-- OPTISAFE -->
+    <div class="card" style="margin-top:18px">
+      <h2 class="h2">OptiSafe Index</h2>
+
+      <p class="muted">
+        Existing evaluations usually report path length and clearance separately. The OptiSafe Index combines both
+        into one score by rewarding planners that are both safe and near-optimal.
+      </p>
+
+      <div class="card" style="box-shadow:none; font-family:monospace; font-size:16px">
+        OptiSafe(P) = (1 − |O − C|) · √(O² + C²) / √2
+      </div>
+
+      <div class="grid" style="margin-top:14px">
+        <div class="card" style="box-shadow:none">
+          <h3>Balance Term</h3>
+          <p class="muted">
+            Penalizes planners that are strong in only one dimension, such as very safe but very long paths.
+          </p>
+        </div>
+
+        <div class="card" style="box-shadow:none">
+          <h3>Strength Term</h3>
+          <p class="muted">
+            Rewards planners that achieve high safety and high optimality simultaneously.
+          </p>
+        </div>
+      </div>
+
+      <img src="assets/thesis/optisafe-surface.png"
+           alt="OptiSafe surface"
+           style="width:100%; border-radius:18px; margin-top:14px"/>
+
+      <div class="meta" style="margin-top:8px">
+        OptiSafe surface showing reward for balanced safety and optimality.
+      </div>
+    </div>
+
+    <!-- SAFEPLAN -->
+    <div class="card" style="margin-top:18px">
+      <h2 class="h2">SafePlan Benchmark</h2>
+
+      <p class="muted">
+        SafePlan is a modular benchmarking framework for evaluating path planners across robotics-relevant metrics
+        such as path length, obstacle clearance, planning time, turning angle, success rate, and OptiSafe score.
+      </p>
+
+      <img src="assets/thesis/safeplan-architecture.png"
+           alt="SafePlan architecture"
+           style="width:100%; border-radius:18px; margin-top:14px"/>
+
+      <div class="meta" style="margin-top:8px">
+        SafePlan architecture for planner evaluation, logging, visualization, and ROS2 integration.
+      </div>
+    </div>
+
+    <!-- RESULTS -->
+    <div class="card" style="margin-top:18px">
+      <h2 class="h2">Simulation Results</h2>
+
+      <p class="muted">
+        UPP was evaluated against classical and safety-aware planners including A*, RRT, CBF-RRT, Voronoi,
+        SDF-A*, Optimized A*, and FSPlanner.
+      </p>
+
+      <div class="grid">
+        <div class="card" style="box-shadow:none">
+          <div class="meta">Sparse Environments</div>
+          <h3>Near-optimal with improved safety</h3>
+          <p class="muted">
+            UPP maintains path length close to A* while improving obstacle clearance.
+          </p>
+        </div>
+
+        <div class="card" style="box-shadow:none">
+          <div class="meta">Cluttered Environments</div>
+          <h3>Best safety-optimality balance</h3>
+          <p class="muted">
+            UPP achieves high OptiSafe performance and remains robust in obstacle-dense environments.
+          </p>
+        </div>
+      </div>
+
+      <img src="assets/thesis/cluttered-map-results.png"
+           alt="Cluttered environment results"
+           style="width:100%; border-radius:18px; margin-top:14px"/>
+
+      <div class="meta" style="margin-top:8px">
+        Planner comparison in cluttered environments.
+      </div>
+    </div>
+
+    <!-- RESULT HIGHLIGHTS -->
+    <div class="card" style="margin-top:18px">
+      <h2 class="h2">Key Results</h2>
+
+      <div class="grid">
+        <div class="card" style="box-shadow:none">
+          <div class="meta">Path Length</div>
+          <h3>≈ 1% deviation</h3>
+          <p class="muted">
+            UPP produces paths close to the shortest path while preserving safety margins.
+          </p>
+        </div>
+
+        <div class="card" style="box-shadow:none">
+          <div class="meta">Clearance</div>
+          <h3>Safety similar to safety aware planners</h3>
+          <p class="muted">
+            UPP avoids unsafe near-obstacle paths commonly produced by shortest-path planners 
+            and give high safety margins with respect to safety aware planners.
+          </p>
+        </div>
+
+        <div class="card" style="box-shadow:none">
+          <div class="meta">Benchmarking</div>
+          <h3>High OptiSafe score</h3>
+          <p class="muted">
+            The proposed method achieves strong balance between safety and optimality.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- HARDWARE -->
+    <div class="card" style="margin-top:18px">
+      <h2 class="h2">Hardware Validation</h2>
+
+      <p class="muted">
+        The proposed planner was validated on a TurtleBot platform using ROS2 Humble, LiDAR-based mapping,
+        Nav2 integration, and DWA local planning.
+      </p>
+
+      <img src="assets/thesis/turtlebot-experiment.png"
+           alt="TurtleBot experiment"
+           style="width:100%; border-radius:18px; margin-top:14px"/>
+
+      <div class="meta" style="margin-top:8px">
+        TurtleBot validation of safety-aware navigation.
+      </div>
+    </div>
+
+    <!-- STACK -->
+    <div class="card" style="margin-top:18px">
+      <h2 class="h2">Technical Stack</h2>
+
+      <div class="kv">
+        <span class="btn">Python</span>
+        <span class="btn">ROS2 Humble</span>
+        <span class="btn">Nav2</span>
+        <span class="btn">TurtleBot</span>
+        <span class="btn">LiDAR</span>
+        <span class="btn">Path Planning</span>
+        <span class="btn">Benchmarking</span>
+        <span class="btn">Safe Autonomy</span>
+      </div>
+    </div>
+
+    <!-- PUBLICATION -->
+    <div class="card" style="margin-top:18px">
+      <h2 class="h2">Publication</h2>
+
+      <p class="muted">
+        <b>Balancing Safety and Optimality in Robot Path Planning: Algorithm and Metric.</b><br/>
+        Jatin Kumar Arora, Soutrik Bandyopadhyay, Sunil Sulania, Shubhendu Bhasin.<br/>
+        <i>International Journal of Intelligent Robotics and Applications</i>, under review.
+      </p>
+    </div>
+
+    <!-- LINKS -->
+    <div class="card" style="margin-top:18px">
+      <h2 class="h2">Resources</h2>
+
+      <ul class="list">
+        <li>
+          <b>SafePlan Framework:</b>
+          <a href="https://github.com/jatinarora30/safeplan" target="_blank" rel="noreferrer">
+            github.com/jatinarora30/safeplan
+          </a>
+        </li>
+
+        <li>
+          <b>ROS2 / TurtleBot Implementation:</b>
+          <a href="https://github.com/jatinarora30/nav2_safeplan" target="_blank" rel="noreferrer">
+            github.com/jatinarora30/nav2_safeplan
+          </a>
+        </li>
+
+        <li>
+          <b>Demo Video:</b>
+          <a href="https://youtu.be/Vwg7CeW_qAg">Embedded above</a>
+        </li>
+
+        <li>
+          <b>Thesis PDF:</b>
+          <a href="YOUR_THESIS_PDF_LINK" target="_blank" rel="noreferrer">
+            Read thesis
+          </a>
+        </li>
+      </ul>
+    </div>
+
+ 
+
+    <div class="footer">
+      <div>© <span id="y"></span> Jatin Kumar Arora</div>
+      <div class="muted2">MS(R) Thesis • IIT Delhi • Safe Autonomy</div>
+    </div>
+
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

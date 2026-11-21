@@ -4,103 +4,73 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
   <title>CV — Jatin Kumar Arora</title>
-
   <link rel="stylesheet" href="assets/style.css"/>
-
-
   <script defer src="assets/main.js"></script>
 </head>
-
 <body>
-
   <div class="nav">
     <div class="nav-inner">
       <a class="brand" href="index.html">
         <div class="logo"></div>
         <div>
           <div>Jatin Kumar Arora</div>
-          <div class="sub">Safe Autonomy • Robotics</div>
+          <div class="sub">Robotics Software Engineer</div>
         </div>
       </a>
 
       <div class="menu">
         <a href="about.html" data-page="about.html">About</a>
-        
-        <a href="publications.html" data-page="publications.html">Publications</a>
-        <a href="articles.html" data-page="articles.html">Articles</a>
-      <a href="projects.html" data-page="projects.html">Projects</a>
-        <a href="education.html" data-page="education.html">Education</a>
         <a href="experience.html" data-page="experience.html">Experience</a>
+        <a href="projects.html" data-page="projects.html">Projects</a>
+        <a href="publications.html" data-page="publications.html">Publications</a>
+        <a href="education.html" data-page="education.html">Education</a>
+        <a href="https://jatinarora30.github.io/blogs/" target="_blank" rel="noreferrer">Loose Notes ↗</a>
         <a href="cv.html" data-page="cv.html">CV</a>
         <button class="btn" onclick="toggleTheme()" title="Toggle theme">☾ / ☀</button>
       </div>
     </div>
   </div>
 
-
   <div class="container">
-
     <div class="card">
       <h1 class="h1">Curriculum Vitae</h1>
-
       <p class="muted">
-        My  CV (PDF) is available below.  
-        This document contains detailed information on my education,
-        research experience, publications, and technical skills.
+        My CV (PDF) is available below. It contains detailed information on my experience, education,
+        projects, publications, and technical skills.
       </p>
-
-      <!-- ===== DOWNLOAD BUTTON ===== -->
       <div class="kv" style="margin-top:16px">
-        <a class="btn"
-           href="assets/Jatin_Kumar_Arora_CV.pdf"
-           target="_blank"
-           rel="noopener">
-           Download CV (PDF)
-        </a>
+        <a class="btn" href="assets/Jatin_Kumar_Arora_CV.pdf" target="_blank" rel="noopener">Download CV (PDF)</a>
       </div>
 
       <hr/>
-
-      <!-- ===== QUICK SUMMARY ===== -->
-      <h2 class="h2">Research Focus</h2>
+      <h2 class="h2">Summary</h2>
       <p class="muted">
-        Safe autonomy for real robotic systems, with emphasis on runtime safety,
-        navigation, control (MPC), and safety aware learning.
-      </p>
-
-      <h2 class="h2">Core Competencies</h2>
-      <p class="muted">
-        Safe autonomy • Model Predictive Control (MPC) • Reinforcement Learning •
-        Motion planning • Sensor fusion (EKF) • Human-robot interaction
+        Robotics Engineer with over two years of experience at Addverb Technologies developing and deploying autonomous
+        mobile robots. Experienced in C++, Python, ROS, hardware integration, localization, motion planning, control, and
+        robotic software architecture. M.S. (Research) in Robotics and Control from IIT Delhi, with research spanning
+        perception, planning, control, and learning.
       </p>
 
       <h2 class="h2">Technical Skills</h2>
       <ul class="list">
         <li><b>Programming:</b> C++, Python, Bash, MATLAB</li>
-        <li><b>Robotics:</b> ROS, Gazebo, PX4, navigation stacks</li>
-        <li><b>Control & Estimation:</b> EKF, PID, MPC, state machines</li>
-        <li><b>ML / RL:</b> TensorFlow, PyTorch (research use)</li>
-        <li><b>Tools:</b> Git, Docker, Linux, SolidWorks</li>
+        <li><b>Robotics:</b> ROS, ROS 2, Nav2, Gazebo, PX4, SLAM, Localization, Navigation</li>
+        <li><b>Perception:</b> LiDAR Processing, Scan Matching, Clustering, Computer Vision, EKF</li>
+        <li><b>Planning &amp; Control:</b> A*, RRT, Motion Planning, PID, MPC, Optimal Control, CBF</li>
+        <li><b>Learning:</b> Reinforcement Learning, Safe RL, PyTorch, TensorFlow, Vision Transformers</li>
+        <li><b>Systems:</b> Linux, Docker, CMake, Git, Multithreading, Hardware Drivers</li>
       </ul>
 
       <hr/>
-
-      <p class="muted2">
-        For the most up-to-date information, please refer to the PDF version above.
-      </p>
+      <p class="muted2">For the most up-to-date information, please refer to the PDF version above.</p>
     </div>
 
     <div class="footer">
       <div>© <span id="y"></span> Jatin Kumar Arora</div>
       <div class="muted2">Curriculum Vitae</div>
     </div>
-
-
   </div>
 
-  <script>
-    document.getElementById("y").textContent = new Date().getFullYear();
-  </script>
-
+  <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
 </body>
 </html>

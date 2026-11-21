@@ -9,56 +9,60 @@
 </head>
 <body>
   <div class="nav"><div class="nav-inner">
-    <a class="brand" href="index.html"><div class="logo"></div><div><div>Jatin Kumar Arora</div><div class="sub">Safe Autonomy • Robotics</div></div></a>
+    <a class="brand" href="index.html"><div class="logo"></div><div><div>Jatin Kumar Arora</div><div class="sub">Robotics Software Engineer</div></div></a>
     <div class="menu">
-      <a href="about.html" data-page="about.html">About</a>
-      
-      <a href="publications.html" data-page="publications.html">Publications</a>
-      <a href="articles.html" data-page="articles.html">Articles</a>
-      <a href="projects.html" data-page="projects.html">Projects</a>
-      <a href="education.html" data-page="education.html">Education</a>
-      <a href="experience.html" data-page="experience.html">Experience</a>
-      <a href="cv.html" data-page="cv.html">CV</a>
-      <button class="btn" onclick="toggleTheme()">☾ / ☀</button>
-    </div>
+        <a href="about.html" data-page="about.html">About</a>
+        <a href="experience.html" data-page="experience.html">Experience</a>
+        <a href="projects.html" data-page="projects.html">Projects</a>
+        <a href="publications.html" data-page="publications.html">Publications</a>
+        <a href="education.html" data-page="education.html">Education</a>
+        <a href="https://jatinarora30.github.io/blogs/" target="_blank" rel="noreferrer">Loose Notes ↗</a>
+        <a href="cv.html" data-page="cv.html">CV</a>
+        <button class="btn" onclick="toggleTheme()" title="Toggle theme">☾ / ☀</button>
+      </div>
   </div></div>
 
   <div class="container">
     <div class="card">
       <h1 class="h1">Experience</h1>
-
       <hr/>
-      <h2 class="h2">Engineer — Mobile Robotics (Addverb Technologies)</h2>
-      <p class="muted">Noida, India • Aug 2023 - Oct 2024</p>
+      <h2 class="h2">Robotics Engineer — Mobile Robotics (Addverb Technologies)</h2>
+      <p class="muted">Noida, India • Jul 2026 – Present</p>
       <ul class="list">
-        <li>Worked on architectural transition from microservices to a monolithic ROS stack, improving integration and deployment speed.</li>
-        <li>Developed adaptive AGV solutions with vertical lift modules and custom attachments.</li>
-        <li>Implemented EKF-based localization, driver integration (LiDAR, IMU, BMS), and control state machines.</li>
-        <li>Deployed 40+ robots across client facilities.</li>
+        <li>Performed system identification for mobile robots, achieving 99.8% agreement between model predictions and measured robot output data to reduce the sim-to-real gap.</li>
+        <li>Supported robot dispatch operations and resolved software bugs to improve operational reliability.</li>
+        <li>Provided remote technical support for deployed robots, diagnosing and resolving site issues.</li>
+        <li>Developed internal validation tools to streamline workflows and simplify routine operational processes.</li>
+        <li>Applied sanitizers across the codebase to identify runtime defects and guide fixes, improving software reliability and code quality.</li>
       </ul>
-
+      <hr/>
+      <h2 class="h2">Robotics Engineer — Mobile Robotics (Addverb Technologies)</h2>
+      <p class="muted">Noida, India • Aug 2023 – Oct 2024</p>
+      <ul class="list">
+        <li>Developed and integrated ROS-based software for autonomous mobile robots, including localization, hardware interfaces, state machines, navigation, and control.</li>
+        <li>Implemented EKF-based localization and drivers for LiDAR, IMU, BMS, safety devices, and industrial attachments.</li>
+        <li>Contributed to the transition from distributed microservices to an integrated robotic software architecture, improving deployment and debugging efficiency.</li>
+        <li>Supported deployment and optimization of more than 200 robots across industrial customer sites, improving runtime performance by approximately 25%.</li>
+      </ul>
       <hr/>
       <h2 class="h2">Graduate Engineer Trainee — Robotics (Addverb Technologies)</h2>
-      <p class="muted">Noida, India • Aug 2022 - Aug 2023</p>
+      <p class="muted">Noida, India • Aug 2022 – Aug 2023</p>
       <ul class="list">
-        <li>Built hardware abstraction layers and a modular driver stack.</li>
-        <li>Contributed to safety protocols and state feedback in robotic fleets.</li>
+        <li>Developed hardware abstraction layers and modular C++ driver interfaces for robotic sensors and actuators.</li>
+        <li>Worked on robot safety logic, system diagnostics, state feedback, integration testing, and field deployment.</li>
       </ul>
-
       <hr/>
-      <h2 class="h2">Summer Intern — R&D (Havells)</h2>
-      <p class="muted">India • Feb 2021 - Jul 2021</p>
+      <h2 class="h2">R&amp;D Intern (Havells India)</h2>
+      <p class="muted">India • Feb 2021 – Jul 2021</p>
       <ul class="list">
-        <li>Developed simulation tools for heater energy loss analysis.</li>
-        <li>Automated thickness-rating selection logic to support product design.</li>
+        <li>Developed simulation and automation tools for thermal-loss analysis and engineering design selection.</li>
+        <li>Built a Python log-analysis tool to track peak software-license usage over time and guide license purchases.</li>
       </ul>
-
       <hr/>
       <h2 class="h2">Simulation Intern (Breathe Digital)</h2>
-      <p class="muted">India • Dec 2020 - Jan 2021</p>
+      <p class="muted">India • Dec 2020 – Jan 2021</p>
       <ul class="list">
-        <li>Built SITL drone models with Gazebo and PX4.</li>
-        <li>Verified control algorithms against simulated CAD drones (SolidWorks).</li>
+        <li>Developed PX4 and Gazebo software-in-the-loop simulations for evaluating drone control algorithms.</li>
       </ul>
     </div>
 
@@ -68,6 +72,6 @@
     </div>
   </div>
 
-  <script>document.getElementById("y").textContent=new Date().getFullYear();</script>
+  <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
 </body>
 </html>

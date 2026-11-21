@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>Jatin Kumar Arora — Robotics Safety</title>
-  <meta name="description" content="Robotics engineer focused on safe autonomy, control, and learning based robotic systems."/>
+  <title>Jatin Kumar Arora — Robotics Software Engineer</title>
+  <meta name="description" content="Robotics engineer working on autonomous mobile robots: perception, planning, control, and learning."/>
   <link rel="stylesheet" href="assets/style.css"/>
   <script defer src="assets/main.js"></script>
 </head>
@@ -15,16 +15,16 @@
         <div class="logo"></div>
         <div>
           <div>Jatin Kumar Arora</div>
-          <div class="sub">Safe Autonomy • Robotics</div>
+          <div class="sub">Robotics Software Engineer</div>
         </div>
       </a>
       <div class="menu">
         <a href="about.html" data-page="about.html">About</a>
-        <a href="publications.html" data-page="publications.html">Publications</a>
-        <a href="articles.html" data-page="articles.html">Articles</a>
-      <a href="projects.html" data-page="projects.html">Projects</a>
-        <a href="education.html" data-page="education.html">Education</a>
         <a href="experience.html" data-page="experience.html">Experience</a>
+        <a href="projects.html" data-page="projects.html">Projects</a>
+        <a href="publications.html" data-page="publications.html">Publications</a>
+        <a href="education.html" data-page="education.html">Education</a>
+        <a href="https://jatinarora30.github.io/blogs/" target="_blank" rel="noreferrer">Loose Notes ↗</a>
         <a href="cv.html" data-page="cv.html">CV</a>
         <button class="btn" onclick="toggleTheme()" title="Toggle theme">☾ / ☀</button>
       </div>
@@ -33,64 +33,60 @@
 
   <div class="container">
     <div class="grid">
-      <!-- LEFT CARD -->
       <div class="card">
-        <div class="badge">Robotics Engineer • Safe Autonomy</div>
-        <h1 class="h1">Robot and AI Safety</h1>
+        <div class="badge">Robotics Software Engineer • Addverb Technologies</div>
+        <h1 class="h1">Perception, Planning, Control &amp; Learning</h1>
         <p class="muted">
-          I'm a robotics engineer specializing in safe autonomy, control theory, and learning-based robotic systems.
-          I'm currently pursuing MS(R) in Robotics & Control at IIT Delhi, focusing on safe and generalizable autonomy for robotic navigation.
+          I'm a robotics engineer with over two years of experience at Addverb Technologies developing and deploying
+          autonomous mobile robots, working across C++, Python, ROS, hardware integration, localization, motion planning,
+          control, and robotic software architecture. I hold an M.S. (Research) in Robotics and Control from IIT Delhi.
         </p>
 
         <div class="kv">
           <a class="btn" href="mailto:arorajatinkumar2000@gmail.com">Email</a>
           <a class="btn" href="https://github.com/jatinarora30" target="_blank" rel="noreferrer">GitHub</a>
           <a class="btn" href="https://www.linkedin.com/in/jatin-kumar-arora-26553b171" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a class="btn" href="https://topmate.io/jatin_kumar157" target="_blank" rel="noreferrer">Topmate</a>
+          <a class="btn" href="https://jatinarora30.github.io/blogs/" target="_blank" rel="noreferrer">Loose Notes</a>
         </div>
 
         <hr/>
         <h2 class="h2">Focus areas</h2>
         <ul class="list">
-          <li>Safe & reliable autonomy (runtime decision-making under uncertainty)</li>
-          <li>Model Predictive Control (MPC) and control guarantees in deployment</li>
-          <li>Motion planning / navigation and safety-aware evaluation</li>
-          <li>Learning-based robotics (RL) with safety constraints</li>
+          <li>Robotic software architecture, hardware drivers, and field deployment of AMRs</li>
+          <li>Localization (EKF), LiDAR perception, and system identification</li>
+          <li>Safety-aware motion planning, MPC, and optimal control</li>
+          <li>Reinforcement learning and safe RL for robot navigation</li>
         </ul>
       </div>
 
       <div class="card">
         <h2 class="h2">Featured</h2>
         <p class="muted">A few starting points.</p>
-
         <div class="card" style="box-shadow:none; margin-top:12px">
-      <div class="meta">Safety Engineering</div>
-      <div style="font-weight:720; margin-top:6px">
-        <a href="safety-portfolio.html">Safety Evaluation Portfolio</a>
-      </div>
-      <p class="muted">
-        Independent work on structured safety evaluation kits for robotic systems
-      </p>
-    </div>
-
-
+          <div class="meta">Research</div>
+          <div style="font-weight:720; margin-top:6px"><a href="thesis.html">Balancing Safety and Optimality in Robot Path Planning</a></div>
+          <p class="muted">MS(R) thesis: algorithm, metric, and benchmark. Published in IJIRA (Springer), 2026.</p>
+        </div>
         <div class="card" style="box-shadow:none; margin-top:12px">
-          <div class="meta">Reading</div>
-          <div style="font-weight:720; margin-top:6px">
-            <a href="articles.html">Articles index</a>
-          </div>
-          <p class="muted">All essays and notes in one place.</p>
+          <div class="meta">Writing</div>
+          <div style="font-weight:720; margin-top:6px"><a href="https://jatinarora30.github.io/blogs/" target="_blank" rel="noreferrer">Loose Notes ↗</a></div>
+          <p class="muted">My blog: loose notes on whatever I am building, breaking, and learning.</p>
+        </div>
+        <div class="card" style="box-shadow:none; margin-top:12px">
+          <div class="meta">1:1 Sessions</div>
+          <div style="font-weight:720; margin-top:6px"><a href="https://topmate.io/jatin_kumar157" target="_blank" rel="noreferrer">Book a session on Topmate ↗</a></div>
+          <p class="muted">Talk to me about robotics careers, ROS, planning and control, or research.</p>
         </div>
       </div>
     </div>
 
     <div class="footer">
       <div>© <span id="y"></span> Jatin Kumar Arora</div>
-      <div class="muted2">Built on GitHub Pages • Math-ready articles</div>
+      <div class="muted2">Built on GitHub Pages</div>
     </div>
   </div>
 
-  <script>
-    document.getElementById("y").textContent = new Date().getFullYear();
-  </script>
+  <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
 </body>
 </html>
